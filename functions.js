@@ -1,3 +1,12 @@
+//finders keepers
+function findElement(arr, func) {
+   let num = arr.filter(func);
+   if (num.length > 1) {
+      return num[0];
+   }
+   return undefined;
+}
+
 // Truncate a String
 function truncateString(str, num) {
    if (str.length > num) {
