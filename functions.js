@@ -1,3 +1,25 @@
+//Chunky Monkey
+function chunkArrayInGroups(arr, size) {
+   var newArr = [];
+   while (arr.length > 0) {
+      newArr.push(arr.splice(0, size));
+   }
+
+   return newArr;
+}
+
+//Mutations
+
+function mutation(arr) {
+   var firstStr = arr[0].toLowerCase();
+   var secondStr = arr[1].toLowerCase();
+
+   for (var i = 0; i < secondStr.length; i++) {
+      if (firstStr.indexOf(secondStr[i]) === -1) return false;
+   }
+   return true;
+}
+
 //Where do I Belong
 
 function getIndexToIns(arr, num) {
@@ -11,6 +33,7 @@ function getIndexToIns(arr, num) {
       }
    }
    //if the num is higher then the array then it needs to go to the end of it
+
    return arr.length;
 }
 
