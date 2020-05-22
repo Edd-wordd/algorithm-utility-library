@@ -1,3 +1,61 @@
+//Where do I Belong
+
+function getIndexToIns(arr, num) {
+   // have to sort the arr with a function
+   arr.sort(function (a, b) {
+      return a - b;
+   });
+   for (var i = 0; i < arr.length; i++) {
+      if (num <= arr[i]) {
+         return i;
+      }
+   }
+   //if the num is higher then the array then it needs to go to the end of it
+   return arr.length;
+}
+
+//Where do I Belong
+
+//falsy bouncer
+function bouncer(arr) {
+   return arr.filter(function (item) {
+      return item;
+   });
+}
+
+// Slice and Splic
+
+function frankenSplice(arr1, arr2, n) {
+   // make a copy of the second array
+   var newArr = arr2.slice();
+   //   splice it and add the first array with the spread operater
+   newArr.splice(n, 0, ...arr1);
+   return newArr;
+}
+
+//Title Case a Sentence
+function titleCase(str) {
+   var titled = str
+      .toLowerCase()
+      .split(" ")
+      .map(function (elem) {
+         return elem[0].toUpperCase() + elem.slice(1);
+      });
+
+   return titled.join(" ");
+}
+
+//boo who
+function booWho(bool) {
+   if (bool === true) {
+      return true;
+   } else if (bool === false) {
+      return true;
+   } else {
+      return false;
+   }
+}
+
 //finders keepers
 function findElement(arr, func) {
    let num = arr.filter(func);
